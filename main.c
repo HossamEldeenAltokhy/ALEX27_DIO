@@ -10,18 +10,23 @@
 #include <avr/io.h>
 #include <util/delay.h>
 #include "mDIO.h"
+#include "mLCD_8.h"
+
+
+
+char arr[] = {'A', 'B', 'C', '\0'};
+unsigned char str[] = "Hello World!"; ///'\0'
+
 
 // Comment
 int main(void) {
 
-    LEDs_init();
-    BTNs_init();
+    init_LCD();
 
+    LCD_send_str(str);
     while (1) {
 
-        setLED(LED0, isPressed(BTN0));
-        setLED(LED1, isPressed(BTN1));
-        setLED(LED2, isPressed(BTN2));
+
 
 
     }
