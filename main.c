@@ -19,12 +19,15 @@ unsigned char str[] = "Hello World!"; ///'\0'
 
 
 // Comment
+
 int main(void) {
 
     init_LCD();
-
-    LCD_send_str(str);
+    int x = 2022;
     while (1) {
+        _delay_ms(1000);
+        LCD_clear();
+        LCD_send_num(x++);
 
 
 

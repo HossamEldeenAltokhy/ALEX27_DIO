@@ -1,7 +1,7 @@
 #define F_CPU 16000000UL
 #include <util/delay.h>
 #include "mLCD_8.h"
-
+#include <stdlib.h>
 
 void init_LCD(){
     // not now
@@ -35,7 +35,9 @@ void LCD_send_str(unsigned char* str){
     }
 }
 void LCD_send_num(int num){
-    
+    char buf[11];
+    itoa(num, buf, 10);
+    LCD_send_str((unsigned char *)buf);
 }
 
 /// Commands
