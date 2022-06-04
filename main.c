@@ -22,12 +22,13 @@ unsigned char str[] = "Hello World!"; ///'\0'
 
 int main(void) {
 
-    init_LCD();
+    init_LCD_4bit();
     int x = 2022;
+    LCD_send_str_4bit(str);
     while (1) {
         _delay_ms(1000);
-        LCD_clear();
-        LCD_send_num(x++);
+        LCD_clear_4bit();
+        LCD_send_num_4bit(x++);
 
 
 
