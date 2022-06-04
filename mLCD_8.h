@@ -18,7 +18,7 @@
 #define RW          2
 #define EN          3
 
-
+// Added 4-bit mode.
 
 void init_LCD();
 void init_LCD_4bit();
